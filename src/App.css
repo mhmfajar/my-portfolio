@@ -1,38 +1,111 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    text-align: center;
+    font-family: "Lato", sans-serif;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #0a1416;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: #f1f2eb;
 }
 
-.App-link {
-  color: #61dafb;
+.cross {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cross .line-1,
+.cross .line-2,
+.cross .line-3 {
+    width: 375px;
+    height: inherit;
+    background-color: rgba(242, 238, 235, 0.125);
+    transform: skewX(35deg);
+    position: absolute;
+    z-index: 0;
+}
+
+.cross .line-1 {
+    left: -12.5%;
+}
+
+.cross .line-2 {
+    left: 37.5%;
+}
+
+.cross .line-3 {
+    left: 87.5%;
+}
+
+.contents {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contents h1 {
+    font-size: 48px;
+    font-weight: 900;
+    filter: drop-shadow(0 4px 20px #000000);
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.contents .progress {
+    margin-top: 30px;
+    width: 500px;
+    height: 15px;
+    background-color: #f1f2eb;
+    transform: skewX(-45deg);
+}
+
+.contents .progress .loading {
+    width: 150px;
+    height: 15px;
+    background-color: #1c7293;
+}
+
+.contents h4,
+.contents h5 {
+    font-weight: 700;
+    margin: 0;
+}
+
+.contents h4 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.contents h5 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.contents a {
+    text-decoration: none;
+    background-color: #b9e3c6;
+    color: #272932;
+    margin-top: 20px;
+    padding: 10px 30px;
+    width: fit-content;
+    transform: skewX(-20deg);
+}
+
+.contents a:hover {
+    background-color: #8cbd9b;
+}
+
+.contents a span {
+    display: block;
+    transform: skewX(20deg);
 }
